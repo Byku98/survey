@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import "bootstrap/dist/css/bootstrap.min.css";
-import App from "./App.tsx";
+import App from "./pages/AppPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

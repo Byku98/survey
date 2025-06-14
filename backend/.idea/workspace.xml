@@ -5,32 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7509830f-18a1-4da3-ae82-76bd5582970d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/SurveyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/configuration/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Answers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Participant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/JwtServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/byczek/survey/SurveyApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey_zipped.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vbox_shared/Nowy OpenDocument Prezentacja.odp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/auth/Auth.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/auth/components/Login.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/auth/components/LoginGoogle.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/survey/Error.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/survey/Survey.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/survey/ThankYou.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,19 +47,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Surver_backend.executor": "Run",
-    "Application.SurveyApplication.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Byczki/Documents/GitHub/survey/backend",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Surver_backend.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SurveyApplication.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Byczki/Documents/GitHub/survey/backend&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Surver_backend" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.byczek.survey.SurveyApplication" />

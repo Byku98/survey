@@ -14,6 +14,11 @@ public class Controller {
 
     private final String secretKey = "182934h7sbd41342342534523423235fvcgsdfgsfdg7393554hASd7"; // Use a secure key
 
+    @PostMapping("/survey")
+    public String test(){
+        return "asb";
+    }
+
     @PostMapping("/responder/login")
     public ResponseEntity<String> responderLogin(@RequestBody String googleToken) {
 
@@ -42,13 +47,13 @@ public class Controller {
                 .body("Logged in");
     }
 
-    @PostMapping("/auth")
-    public String authUser(){
+    @PostMapping("/admin/auth")
+    public ResponseEntity<String> authUser(){
         System.out.println("1234");
-        return "1234";
+        return ResponseEntity.ok("1234");
     }
 
-    @GetMapping("/auth")
+    @GetMapping("/admin/auth")
     public String authGetUser(){
         System.out.println("1234");
         return "1234";
