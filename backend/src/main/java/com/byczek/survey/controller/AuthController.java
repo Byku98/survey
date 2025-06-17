@@ -1,4 +1,4 @@
-package com.byczek.survey.controller;
+package com.byczek.survey.main.java.com.byczek.survey.controller;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,7 @@ import java.util.Date;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class Controller {
+public class AuthController {
 
     private final String secretKey = "182934h7sbd41342342534523423235fvcgsdfgsfdg7393554hASd7"; // Use a secure key
 

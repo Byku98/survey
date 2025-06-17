@@ -1,4 +1,4 @@
-package com.byczek.survey.configuration;
+package com.byczek.survey.main.java.com.byczek.survey.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

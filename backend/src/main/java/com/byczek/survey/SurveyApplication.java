@@ -1,4 +1,4 @@
-package com.byczek.survey;
+package com.byczek.survey.main.java.com.byczek.survey;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
