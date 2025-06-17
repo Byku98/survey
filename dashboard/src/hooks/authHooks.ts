@@ -18,8 +18,11 @@ export function useAuth(setToken: (token: string) => void) {
     if (!idToken) throw new Error("Missing Google ID token");
 
     try {
-      await loginGoogleUser(idToken);
+      const { token } = await loginGoogleUser(idToken);
+      setAuthTokenCookie(token);
+      setToken(token);
       navigate("/survey");
+
     } catch (err) {
       console.error("Google login failed:", err);
       // Optionally show error to user

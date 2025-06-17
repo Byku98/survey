@@ -1,4 +1,4 @@
 package com.byczek.survey.dto;
 
-public class SurveyAnswers {
+public class SurveyAnswersDto {
 }

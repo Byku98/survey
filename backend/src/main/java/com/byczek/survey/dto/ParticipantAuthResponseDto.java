@@ -1,10 +1,10 @@
 package com.byczek.survey.dto;
 
-public class AuthParticipantResponseDto {
+public class ParticipantAuthResponseDto {
 
     private String token;
 
-    public AuthParticipantResponseDto(String token) {
+    public ParticipantAuthResponseDto(String token) {
         this.token = token;
     }
 

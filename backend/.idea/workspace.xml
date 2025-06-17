@@ -5,17 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7509830f-18a1-4da3-ae82-76bd5582970d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/configuration/JpaSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dao/AdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/AdminAuthRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/AdminAuthResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/AdminRegisterResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/ParticipantAuthResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/AdminEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/ParticipantEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/SurveyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminAuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminRegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AuthJwtGeneateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/SurveyJwtValidateService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/configuration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Answers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/SurveyAnswersDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Participant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/JwtServiceProvider.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/auth/Auth.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/auth/components/Login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/auth/components/LoginGoogle.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/survey/Error.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/survey/Survey.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/features/survey/ThankYou.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/configuration/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/byczek/survey/configuration/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/dto/Answers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/dto/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/dto/Participant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/api/authApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/api/authApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/hooks/authHooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/hooks/authHooks.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -60,6 +80,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.byczek.survey.dto" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Surver_backend" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.byczek.survey.SurveyApplication" />

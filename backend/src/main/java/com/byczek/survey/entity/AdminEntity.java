@@ -1,24 +1,31 @@
 package com.byczek.survey.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-public class Admin {
+@Entity
+@Table(name="admins")
+public class AdminEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    Integer id_user;
     String username;
     String password;
-    Integer token_id;
 
-    public Integer getId() {
-        return id;
+    public AdminEntity() {
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public AdminEntity(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public Integer getId() {
+        return id_user;
+    }
+
+    public void setId(Integer id_user) {
+        this.id_user = id_user;
     }
 
     public String getUsername() {
@@ -37,11 +44,4 @@ public class Admin {
         this.password = password;
     }
 
-    public Integer getToken_id() {
-        return token_id;
-    }
-
-    public void setToken_id(Integer token_id) {
-        this.token_id = token_id;
-    }
 }

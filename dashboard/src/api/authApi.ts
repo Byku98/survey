@@ -11,10 +11,12 @@ export async function loginUser(credentials: LoginCredentials) {
 }
 
 export async function loginGoogleUser (idToken: string){
-    return fetch("http://localhost:3000/responder/login", {
+  const response = await fetch("http://localhost:3000/responder/auth", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({idToken}),
       credentials: 'include',
-    })
-  };
+    });
+
+  return response.json();  
+}

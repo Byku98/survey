@@ -1,6 +1,6 @@
 package com.byczek.survey.dto;
 
-public class RegisterAdminResponseDto {
+public class AdminRegisterResponseDto {
 
     private int id;
     private String username;

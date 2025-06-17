@@ -1,6 +1,6 @@
 package com.byczek.survey.dto;
 
-public class AuthAdminRequestDto {
+public class AdminAuthRequestDto {
 
     private String username;
     private String password;
