@@ -1,14 +1,32 @@
 package com.byczek.survey.dto;
 
-public class ParticipantAuthRequestDto {
+public class ParticipantDto {
 
-    private String idToken;
+    private String firstName;
+    private String lastName;
+    private String email;
 
-    public String getIdToken() {
-        return idToken;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setIdToken(String idToken) {
-        this.idToken = idToken;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

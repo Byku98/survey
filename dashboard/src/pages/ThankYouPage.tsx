@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
+import { removeAuthTokenCookie } from "../utils/cookieUtils";
 
 export default function ThankYou() {
-
-  const navigate = useNavigate();
+//  const navigate = useNavigate();
 
   return (
     <div className="d-flex vh-100 justify-content-center align-items-center bg-light">
@@ -13,7 +13,10 @@ export default function ThankYou() {
         </p>
         <button
           className="btn btn-primary mt-4"
-          onClick={() => navigate("/survey")}
+          onClick={() => {
+            removeAuthTokenCookie("token");
+            window.location.reload();
+          }}
         >
           Take a lollipop
         </button>

@@ -1,11 +1,13 @@
 package com.byczek.survey.services;
 
+import org.springframework.http.ResponseEntity;
+
 public interface IAuthJWTService<T> {
 
     String generateJWT(T entity);
 
-    boolean validateJWT();
+    ResponseEntity<Void> validateJWT(String token);
 
-    boolean deleteJWT();
+    ResponseEntity<Void> deleteJWT(String token);
 
 }

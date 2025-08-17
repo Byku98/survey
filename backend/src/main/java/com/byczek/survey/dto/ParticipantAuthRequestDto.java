@@ -1,18 +1,14 @@
 package com.byczek.survey.dto;
 
-public class ParticipantAuthResponseDto {
+public class ParticipantAuthRequestDto {
 
-    private String token;
+    private String idToken;
 
-    public ParticipantAuthResponseDto(String token) {
-        this.token = token;
+    public String getIdToken() {
+        return idToken;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
+    public void setIdToken(String idToken) {
+        this.idToken = idToken;
     }
 }

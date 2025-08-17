@@ -1,48 +1,36 @@
 package com.byczek.survey.controller;
 
-import com.byczek.survey.dto.ParticipantAuthRequestDto;
-import com.byczek.survey.dto.TokenResponseDto;
-import com.byczek.survey.services.*;
+import com.byczek.survey.dto.SurveysDto;
+import com.byczek.survey.services.AuthJWTService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
-public class ParticipantController {
+public class SurveyController {
 
-//    variables
-//    @Value("${jwt.secret}")
-//    private String secretKey;
-    private ParticipantJWTService participantJWTService;
-    private AuthJWTService authJWTService;
-
+//    private AuthJWTService authJWTService;
 
     @Autowired
-    public ParticipantController(ParticipantJWTService participantJWTService) {
-        this.participantJWTService = participantJWTService;
-    }
-
-    @PostMapping("/responder/auth")
-    public ResponseEntity<TokenResponseDto> participantLogin(@RequestBody ParticipantAuthRequestDto googleTokenRequest) {
-        
-        TokenResponseDto tokenResponseDto = participantJWTService.authParticipant(googleTokenRequest.getIdToken());
-
-        return ResponseEntity.ok(tokenResponseDto);
+    public SurveyController() {
 
     }
 
-    @PostMapping("/responder/logout")
-    public ResponseEntity<Void> participantLogout(@RequestBody ParticipantAuthRequestDto tokenRequest) {
+    @PostMapping("/surveys/sendSurvey")
+    public ResponseEntity<Void> submitSurvey(@RequestHeader(value = "Authorization") String authorizationHeader, @RequestBody SurveysDto surveysDto) {
 
-        return participantJWTService.deleteJWT(tokenRequest.getIdToken());
+        log.info(authorizationHeader);
+        log.info(surveysDto.getOpenName());
+        log.info(String.valueOf(surveysDto.getCheckboxAnswers().length));
+        log.info(surveysDto.getRadioAnswer());
+        log.info(surveysDto.getOpenAnswer());
+
+        return ResponseEntity.ok().build();
 
     }
-
-    @PostMapping("/validateToken")
-    public ResponseEntity<Void> validateToken(@RequestBody ParticipantAuthRequestDto tokenRequest) {
-
-        return participantJWTService.validateJWT(tokenRequest.getIdToken());
-
-    }
-
 }

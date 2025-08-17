@@ -1,7 +1,7 @@
 import { LoginCredentials } from "../types/auth";
 
 export async function loginUser(credentials: LoginCredentials) {
-  const response = await fetch("http://localhost:3000/admin/auth", {
+  const response = await fetch('${API_URL}/admin/auth', {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(credentials),
@@ -11,7 +11,7 @@ export async function loginUser(credentials: LoginCredentials) {
 }
 
 export async function loginGoogleUser (idToken: string){
-  const response = await fetch("http://localhost:3000/responder/auth", {
+  const response = await fetch('${API_URL}/responder/auth', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({idToken}),

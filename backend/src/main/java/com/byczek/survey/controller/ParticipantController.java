@@ -1,51 +1,45 @@
 package com.byczek.survey.controller;
 
-import com.byczek.survey.dto.AdminAuthRequestDto;
-import com.byczek.survey.dto.AdminAuthResponseDto;
-import com.byczek.survey.services.AdminAuthService;
-import com.byczek.survey.services.AdminRegisterService;
+import com.byczek.survey.dto.ParticipantAuthRequestDto;
+import com.byczek.survey.dto.TokenResponseDto;
+import com.byczek.survey.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class AuthController {
+public class ParticipantController {
 
-    //variables
-    //@Value("${jwt.secret}")
-    //private String secretKey;
-    private AdminRegisterService adminRegisterService;
-    private AdminAuthService adminAuthService;
+    private ParticipantJWTService participantJWTService;
+    private AuthJWTService authJWTService;
+
 
     @Autowired
-    public AuthController(AdminRegisterService adminRegisterService, AdminAuthService adminAuthService) {
-        this.adminRegisterService = adminRegisterService;
-        this.adminAuthService = adminAuthService;
+    public ParticipantController(ParticipantJWTService participantJWTService) {
+        this.participantJWTService = participantJWTService;
     }
 
     @PostMapping("/responder/auth")
-    public ResponseEntity<AdminAuthResponseDto> responderLogin(@RequestBody String googleToken) {
+    public ResponseEntity<TokenResponseDto> participantLogin(@RequestBody ParticipantAuthRequestDto googleTokenRequest) {
 
-        System.out.println(googleToken);
-        return ResponseEntity.ok(new AdminAuthResponseDto("1234"));
+        TokenResponseDto tokenResponseDto = participantJWTService.authParticipant(googleTokenRequest.getIdToken());
+
+        return ResponseEntity.ok(tokenResponseDto);
 
     }
 
-    @PostMapping("/admin/auth")
-    public ResponseEntity<AdminAuthResponseDto> authAdmin(@RequestBody AdminAuthRequestDto authRequest) {
+    @PostMapping("/responder/logout")
+    public ResponseEntity<Void> participantLogout(@RequestBody ParticipantAuthRequestDto tokenRequest) {
 
-        AdminAuthResponseDto response = adminAuthService.authAdmin(authRequest);
+        return participantJWTService.deleteJWT(tokenRequest.getIdToken());
 
-        return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/admin/register")
-    public ResponseEntity<String> registerAdmin(@RequestParam String username, @RequestParam String password) {
+    @PostMapping("/validateToken")
+    public ResponseEntity<Void> validateToken(@RequestBody ParticipantAuthRequestDto tokenRequest) {
 
-        String result = adminRegisterService.registerAdmin(username, password);
+        return participantJWTService.validateJWT(tokenRequest.getIdToken());
 
-        return ResponseEntity.badRequest().body(result);
     }
 
 }

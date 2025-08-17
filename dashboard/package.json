@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run sync-distro-minime",
+    "sync-distro-minime": "scp -r ./dist/* minime@192.168.1.125:/opt/cicd/survey/dashboard/buid_image/dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },

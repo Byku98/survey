@@ -3,8 +3,8 @@ package com.byczek.survey.services;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.byczek.survey.dao.ParticipantRepository;
-import com.byczek.survey.dto.ParticipantAuthResponseDto;
 import com.byczek.survey.dto.ParticipantDto;
+import com.byczek.survey.dto.TokenResponseDto;
 import com.byczek.survey.entity.ParticipantEntity;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -22,14 +22,14 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-public class ParticipantAuthJWTService implements IAuthJWTService<ParticipantEntity> {
+public class ParticipantJWTService implements IAuthJWTService<ParticipantEntity> {
 
     private ParticipantRepository participantRepository;
     private String jwtSecret;
     private final Key jwtKey;
 
     @Autowired
-    public ParticipantAuthJWTService(@Value("${jwt.secret}") String jwtSecret, ParticipantRepository participantRepository) {
+    public ParticipantJWTService(@Value("${jwt.secret}") String jwtSecret, ParticipantRepository participantRepository) {
         this.participantRepository = participantRepository;
         this.jwtSecret = jwtSecret;
         this.jwtKey = Keys.hmacShaKeyFor(jwtSecret.getBytes());
@@ -40,7 +40,7 @@ public class ParticipantAuthJWTService implements IAuthJWTService<ParticipantEnt
      *
      * @param userGoogleJwt
      */
-    public ParticipantAuthResponseDto authParticipant(String userGoogleJwt) {
+    public TokenResponseDto authParticipant(String userGoogleJwt) {
 
         ParticipantEntity participantEntity;
         ParticipantDto participantDto = decodeToken(userGoogleJwt);
@@ -65,9 +65,9 @@ public class ParticipantAuthJWTService implements IAuthJWTService<ParticipantEnt
 
         log.info("Participant token generated: " + token);
 
-        ParticipantAuthResponseDto participantAuthResponseDto = new ParticipantAuthResponseDto(token);
+        //ParticipantAuthResponseDto participantAuthResponseDto = new ParticipantAuthResponseDto(token);
 
-        return participantAuthResponseDto;
+        return new TokenResponseDto(token);
 
     }
 

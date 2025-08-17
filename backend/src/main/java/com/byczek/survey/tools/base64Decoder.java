@@ -1,16 +1,12 @@
-package com.byczek.survey.utils;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
+package com.byczek.survey.tools;
 import java.util.Base64;
 
-@Service
+
 public class base64Decoder {
 
     Base64.Decoder decoder;
 
-    @Autowired
+
     public base64Decoder(Base64.Decoder decoder) {
         this.decoder = Base64.getUrlDecoder();
     }

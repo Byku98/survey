@@ -2,7 +2,7 @@ package com.byczek.survey.services;
 
 import com.byczek.survey.dao.AdminRepository;
 import com.byczek.survey.dto.AdminAuthRequestDto;
-import com.byczek.survey.dto.AdminAuthResponseDto;
+import com.byczek.survey.dto.TokenResponseDto;
 import com.byczek.survey.entity.AdminEntity;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -19,14 +19,14 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-public class AdminAuthJWTService implements IAuthJWTService<AdminEntity> {
+public class AdminJWTService implements IAuthJWTService<AdminEntity> {
 
     private String jwtSecret;
     private final Key jwtKey;
     private AdminRepository adminRepository;
 
     @Autowired
-    public AdminAuthJWTService(@Value("${jwt.secret}") String jwtSecret, AdminRepository adminRepository) {
+    public AdminJWTService(@Value("${jwt.secret}") String jwtSecret, AdminRepository adminRepository) {
 
         this.jwtSecret = jwtSecret;
         this.jwtKey = Keys.hmacShaKeyFor(jwtSecret.getBytes());
@@ -34,7 +34,7 @@ public class AdminAuthJWTService implements IAuthJWTService<AdminEntity> {
 
     }
 
-    public AdminAuthResponseDto authAdmin(AdminAuthRequestDto authAdminRequest) {
+    public TokenResponseDto authAdmin(AdminAuthRequestDto authAdminRequest) {
 
         Optional<AdminEntity> adminData = adminRepository.findByUsername(authAdminRequest.getUsername());
         AdminEntity adminUser;
@@ -51,7 +51,7 @@ public class AdminAuthJWTService implements IAuthJWTService<AdminEntity> {
 
             log.info("Newly generated token for user "+adminUser.getUsername()+" is "+token);
 
-            return new AdminAuthResponseDto(token);
+            return new TokenResponseDto(token);
         }
 
         return null;

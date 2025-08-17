@@ -4,37 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7509830f-18a1-4da3-ae82-76bd5582970d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/configuration/JpaSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dao/AdminRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/AdminAuthRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/AdminAuthResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/AdminRegisterResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/ParticipantAuthResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/AdminEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/ParticipantEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/SurveyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminAuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminRegisterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AuthJwtGeneateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/SurveyJwtValidateService.java" afterDir="false" />
+    <list default="true" id="7509830f-18a1-4da3-ae82-76bd5582970d" name="Changes" comment="add project data">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/ParticipantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/SurveyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dao/ParticipantRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/ParticipantDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/TokenEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminJWTService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AuthJWTService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/IAuthJWTService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/ParticipantJWTService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/tools/base64Decoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/configuration/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Answers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/SurveyAnswersDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/Participant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/JwtServiceProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/configuration/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/byczek/survey/configuration/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/dto/Answers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/dto/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/byczek/survey/dto/Participant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dao/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dao/AdminRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/AdminAuthResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/TokenResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/ParticipantAuthResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/ParticipantAuthRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/SurveyAnswersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/dto/SurveysDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/AdminEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/AdminEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/ParticipantEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/entity/ParticipantEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminAuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AdminRegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/AuthJwtGeneateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/byczek/survey/services/SurveyJwtValidateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/survey_zipped.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dashboard/src/api/authApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/api/authApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/hooks/authHooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/hooks/authHooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/pages/AppPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/pages/AppPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/pages/SurveyPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/pages/SurveyPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/pages/SurveyPage_bak.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/pages/ThankYouPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/pages/ThankYouPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/utils/cookieUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/utils/cookieUtils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -67,25 +69,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Surver_backend.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SurveyApplication.executor&quot;: &quot;Coverage&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Byczki/Documents/GitHub/survey/backend&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Surver_backend.executor": "Run",
+    "Application.SurveyApplication.executor": "Coverage",
+    "Maven.building JAR  no tests.executor": "Run",
+    "Maven.building JAR.executor": "Run",
+    "Maven.deploy JAR no tests.executor": "Run",
+    "Maven.survey [clean].executor": "Run",
+    "Maven.survey [compile].executor": "Run",
+    "Maven.survey [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Byczki/Documents/GitHub/survey/backend",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.byczek.survey.controller" />
       <recent name="com.byczek.survey.dto" />
+      <recent name="com.byczek.survey.services" />
+      <recent name="com.byczek.survey.dao" />
+      <recent name="com.byczek.survey.entity" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Maven.deploy JAR no tests">
     <configuration name="Surver_backend" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.byczek.survey.SurveyApplication" />
       <module name="survey" />
@@ -93,6 +106,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="building JAR  no tests" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+                <option value="-DskipTests" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy JAR no tests" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="deploy" />
+                <option value="-Dmaven.test.skip=true" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Surver_backend" />
+      <item itemvalue="Maven.building JAR  no tests" />
+      <item itemvalue="Maven.deploy JAR no tests" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -110,7 +192,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

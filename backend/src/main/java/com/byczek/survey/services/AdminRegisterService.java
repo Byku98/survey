@@ -20,10 +20,6 @@ public class AdminRegisterService {
         this.adminRepository = adminRepository;
     }
 
-    public AdminRegisterService(PasswordEncoder passwordEncoder) {
-        this.passwordEncoder = passwordEncoder;
-    }
-
     public String registerAdmin(String username, String password) {
 
         log.info(username);
